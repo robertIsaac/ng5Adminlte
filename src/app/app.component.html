@@ -1,0 +1,62 @@
+<div class="wrapper">
+  <header class="main-header">
+    <a href="#" routerLink="/" class="logo">
+      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-lg"><b>Admin</b>LTE</span>
+    </a>
+    <nav class="navbar navbar-static-top" role="navigation">
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="/assets/img/guest.png" class="user-image" alt="User Image">
+              <span class="hidden-xs">{{ userName }}</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="user-header">
+                <img src="/assets/img/guest.png" class="img-circle" alt="User Image">
+                <p>
+                  {{ userName }} - {{ role }}
+                  <small>Member since Nov. 2012</small>
+                </p>
+              </li>
+              <li class="user-footer">
+                <div class="pull-right">
+                  <a *ngIf="role != 'guest'" href="#" class="btn btn-default btn-flat" (click)="signOut()">Sign out</a>
+                  <a routerLink="/signIn" *ngIf="role == 'guest'" href="#" class="btn btn-default btn-flat">Sign In</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <aside class="main-sidebar">
+    <section class="sidebar">
+      <ul class="sidebar-menu" data-widget="tree">
+        <li><a href="#" *ngIf="role == 'guest'" routerLink="/signIn"><i class="fa fa-link"></i> <span>sign in</span></a></li>
+        <li><a href="#" *ngIf="role != 'guest'" routerLink="/admin/insert"><i class="fa fa-link"></i> <span>insert product</span></a></li>
+        <li>
+          <a href="#" *ngIf="role != 'guest'" (click)="signOut()">
+            <i class="fa fa-link"></i>
+            <span>sign out</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </aside>
+  <div class="content-wrapper">
+    <router-outlet></router-outlet>
+  </div>
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      Anything you want
+    </div>
+    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+  </footer>
+  <div class="control-sidebar-bg"></div>
+</div>

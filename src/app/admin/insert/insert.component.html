@@ -1,0 +1,47 @@
+<!-- Main content -->
+<section class="content container-fluid">
+  <div class="box box-primary">
+    <div class="box-header with-border">
+      <h3 class="box-title">Insert new product</h3>
+    </div>
+    <!-- /.box-header -->
+    <!-- form start -->
+    <form role="form"  (ngSubmit)="insertProduct()" #Insert="ngForm">
+      <div class="box-body">
+        <div class="form-group">
+          <label for="product-name">Product name</label>
+          <input type="text" class="form-control" id="product-name" placeholder="Enter product name" required
+                 minlength="3" maxlength="32" [(ngModel)]="productName" name="productName">
+
+          <label for="product-arabic-name">Product arabic name</label>
+          <input type="text" class="form-control" id="product-arabic-name" placeholder="Enter product name" required
+                 minlength="3" maxlength="32" [(ngModel)]="productArabicName" name="productArabicName">
+
+          <label for="product-description">Product description</label>
+          <input type="text" class="form-control" id="product-description" placeholder="enter product description" [(ngModel)]="productDescription" name="productDescription">
+
+          <label for="product-arabic-description">Product arabic description</label>
+          <input type="text" class="form-control" id="product-arabic-description"
+                 placeholder="enter product description" [(ngModel)]="productArabicDescription" name="productArabicDescription">
+
+          <label for="product-price">Product price</label>
+          <input type="number" min="0" step="0.01" class="form-control" id="product-price"
+                 placeholder="enter product price" required  [(ngModel)]="productPrice" name="productPrice">
+
+          <label for="file-input">image url</label>
+          <input type="text" class="form-control" id="file-input"
+                 placeholder="enter product image" required  [(ngModel)]="productImageURL" name="productImageURL">
+          <!--<input type="file" id="file-input"  [(ngModel)]="productImageURL" name="productImageURL">-->
+          <!--<p class="help-block">Only jpg, jpeg and png images are allowed and maximum size of 1 MB.</p>-->
+        </div>
+
+      </div>
+      <!-- /.box-body -->
+
+      <div class="box-footer">
+        <button type="submit" class="btn btn-primary" [disabled]="!Insert.form.valid || invalid()">Submit</button>
+      </div>
+    </form>
+  </div>
+</section>
+<!-- /.content -->
