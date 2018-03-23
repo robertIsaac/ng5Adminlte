@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, Input} from '@angular/core';
 import {UserService} from './user.service';
+import {ProductService} from './product.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,10 @@ export class AppComponent {
   title = 'app';
   userName: string;
   role: string;
-  constructor(private user: UserService) {
+  lan: string;
+
+  constructor(private user: UserService, private elementRef: ElementRef) {
+    this.lan = this.elementRef.nativeElement.getAttribute('lan');
     this.user.currentUser.subscribe(response => {
       this.userName = response.name;
       this.role = response.role;
@@ -18,8 +22,10 @@ export class AppComponent {
   }
 
   signOut() {
-    this.user.currentUser.name = 'guest';
-    this.user.currentUser.role = 'guest';
-    this.user.changeUser(this.user.currentUser);
+    const guestUser = {
+      name: 'guest',
+      role: 'guest'
+    };
+    this.user.changeUser(guestUser);
   }
 }

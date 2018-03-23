@@ -1,22 +1,28 @@
 <div *ngFor="let product of products; let i = index" class="col-sm-12 col-md-6">
   <div class="box box-solid">
     <div class="box-body">
-      <h4 style="background-color:#f7f7f7; font-size: 18px; text-align: center; padding: 7px 10px; margin-top: 0;">
+      <h4 *ngIf="lan == 'en'" style="background-color:#f7f7f7; font-size: 18px; text-align: center; padding: 7px 10px; margin-top: 0;">
         {{product.name}}
+      </h4>
+
+      <h4 *ngIf="lan == 'ar'" style="background-color:#f7f7f7; font-size: 18px; text-align: center; padding: 7px 10px; margin-top: 0;">
+        {{product.arabicName}}
       </h4>
       <div class="media">
         <div class="media-left">
-            <img src="{{product.imageURL}}" alt="{{product.name}}Pro" class="media-object" >
+          <img *ngIf="lan == 'en'" src="{{product.imageURL}}" alt="{{product.name}}" class="media-object" >
+          <img *ngIf="lan == 'ar'" src="{{product.imageURL}}" alt="{{product.arabicName}}" class="media-object" >
         </div>
         <div class="media-body">
           <div class="clearfix">
-            <h4 style="margin-top: 0">{{product.price}} EGP</h4>
+            <h4 style="margin-top: 0">{{product.price}} <span i18n="@@EGP">EGP</span></h4>
 
-            <p>{{product.description}}</p>
+            <p *ngIf="lan == 'en'">{{product.description}}</p>
+            <p *ngIf="lan == 'ar'" >{{product.arabicDescription}}</p>
 
             <p class="pull-right">
-              <a *ngIf="currentUser.role == 'Admin'" href="#" class="btn btn-success btn-sm ad-click-event" routerLink="update/{{product.id}}">update</a>
-              <a *ngIf="currentUser.role == 'Admin'" href="#" class="btn btn-success btn-sm ad-click-event" (click)="delete(i)">delete</a>
+              <a *ngIf="currentUser.role == 'Admin'" href="#" class="btn btn-success btn-sm ad-click-event" routerLink="admin/update/{{product.id}}/" i18n="@@update">update</a>
+              <a *ngIf="currentUser.role == 'Admin'" href="#" class="btn btn-success btn-sm ad-click-event" (click)="delete(i)" i18n="@@delete">delete</a>
             </p>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import {current} from "codelyzer/util/syntaxKind";
+import { CookieService } from 'ngx-cookie-service';
 
 
 
@@ -33,9 +33,18 @@ export class UserService {
 
   currentUser = this.user.asObservable();
 
-  constructor() {}
+  constructor( private cookieService: CookieService ) {
+    if (this.cookieService.get('username') !== '') {
+      this.user.next({
+        name: this.cookieService.get('username'),
+        role: this.cookieService.get('role')
+      });
+    }
+  }
 
-  changeUser(product) {
-    this.user.next(product);
+  changeUser(user) {
+    this.user.next(user);
+    this.cookieService.set( 'username', user.name );
+    this.cookieService.set( 'role', user.role );
   }
 }

@@ -24,9 +24,11 @@ export class LoginComponent implements OnInit {
         // if found a match username check its password
         if (this.password === u.password) {
           // if the password is correct then update the user info and inform the user that he is logged then send him to home page
-          this.user.currentUser.name = this.userName;
-          this.user.currentUser.role = u.role;
-          this.user.changeUser(this.user.currentUser);
+          const loggedUser = {
+            name: this.userName,
+            role: u.role
+          };
+          this.user.changeUser(loggedUser);
           alert('welcome ' + this.userName);
           this.router.navigate(['']);
           return;

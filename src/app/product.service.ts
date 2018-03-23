@@ -3,7 +3,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class ProductService {
-
+  lan = new BehaviorSubject('en');
   private products = new BehaviorSubject<any>([
     {
       id: 1,

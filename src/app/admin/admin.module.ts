@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { AdminRoutingModule } from './admin-routing.module';
 import { InsertComponent } from './insert/insert.component';
 import { UpdateComponent } from './update/update.component';
-import { DeleteComponent } from './delete/delete.component';
 
 @NgModule({
   imports: [
@@ -13,6 +12,6 @@ import { DeleteComponent } from './delete/delete.component';
     AdminRoutingModule,
     FormsModule
   ],
-  declarations: [InsertComponent, UpdateComponent, DeleteComponent]
+  declarations: [InsertComponent, UpdateComponent]
 })
 export class AdminModule { }

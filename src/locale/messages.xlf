@@ -4,15 +4,17 @@
     <body>
       <trans-unit id="signOut" datatype="html">
         <source>Sign out</source>
-        <target>تسجيل الدخول</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">28</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="signIn" datatype="html">
         <source>Sign In</source>
-        <target>تسجيل الدخول</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">29</context>
@@ -28,7 +30,6 @@
       </trans-unit>
       <trans-unit id="insertProduct" datatype="html">
         <source>insert product</source>
-        <target>ادخال منتج</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">42</context>
@@ -36,7 +37,6 @@
       </trans-unit>
       <trans-unit id="lan" datatype="html">
         <source>en</source>
-        <target>ar</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">53</context>
@@ -44,7 +44,6 @@
       </trans-unit>
       <trans-unit id="copyRight" datatype="html">
         <source>Copyright © 2016 <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>Company<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</source>
-        <target>جميع الحقوق محفوظة © 2016</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">59</context>
@@ -52,7 +51,6 @@
       </trans-unit>
       <trans-unit id="EGP" datatype="html">
         <source>EGP</source>
-        <target>ج.م</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/products/products.component.ts</context>
           <context context-type="linenumber">13</context>
@@ -60,7 +58,6 @@
       </trans-unit>
       <trans-unit id="update" datatype="html">
         <source>update</source>
-        <target>تعديل</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/products/products.component.ts</context>
           <context context-type="linenumber">18</context>
@@ -68,7 +65,6 @@
       </trans-unit>
       <trans-unit id="delete" datatype="html">
         <source>delete</source>
-        <target>مسح</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/products/products.component.ts</context>
           <context context-type="linenumber">19</context>
@@ -76,7 +72,6 @@
       </trans-unit>
       <trans-unit id="userName" datatype="html">
         <source>user name</source>
-        <target>اسم المستخدم</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/login/login.component.ts</context>
           <context context-type="linenumber">7</context>
@@ -84,7 +79,6 @@
       </trans-unit>
       <trans-unit id="password" datatype="html">
         <source>Password</source>
-        <target>الرقم السرى</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/login/login.component.ts</context>
           <context context-type="linenumber">11</context>

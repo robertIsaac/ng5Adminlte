@@ -12,12 +12,12 @@
         <ul class="nav navbar-nav">
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="/assets/img/guest.png" class="user-image" alt="User Image">
+              <img src="assets/img/guest.png" class="user-image" alt="User Image">
               <span class="hidden-xs">{{ userName }}</span>
             </a>
             <ul class="dropdown-menu">
               <li class="user-header">
-                <img src="/assets/img/guest.png" class="img-circle" alt="User Image">
+                <img src="assets/img/guest.png" class="img-circle" alt="User Image">
                 <p>
                   {{ userName }} - {{ role }}
                   <small>Member since Nov. 2012</small>
@@ -25,8 +25,8 @@
               </li>
               <li class="user-footer">
                 <div class="pull-right">
-                  <a *ngIf="role != 'guest'" href="#" class="btn btn-default btn-flat" (click)="signOut()">Sign out</a>
-                  <a routerLink="/signIn" *ngIf="role == 'guest'" href="#" class="btn btn-default btn-flat">Sign In</a>
+                  <a *ngIf="role != 'guest'" href="#" class="btn btn-default btn-flat" (click)="signOut()" i18n="@@signOut">Sign out</a>
+                  <a routerLink="/signIn" *ngIf="role == 'guest'" href="#" class="btn btn-default btn-flat" i18n="@@signIn">Sign In</a>
                 </div>
               </li>
             </ul>
@@ -38,12 +38,12 @@
   <aside class="main-sidebar">
     <section class="sidebar">
       <ul class="sidebar-menu" data-widget="tree">
-        <li><a href="#" *ngIf="role == 'guest'" routerLink="/signIn"><i class="fa fa-link"></i> <span>sign in</span></a></li>
-        <li><a href="#" *ngIf="role != 'guest'" routerLink="/admin/insert"><i class="fa fa-link"></i> <span>insert product</span></a></li>
+        <li><a href="#" *ngIf="role == 'guest'" routerLink="/signIn"><i class="fa fa-link"></i> <span i18n="@@signIn">sign in</span></a></li>
+        <li><a href="#" *ngIf="role != 'guest'" routerLink="/admin/insert"><i class="fa fa-link"></i> <span i18n="@@insertProduct">insert product</span></a></li>
         <li>
           <a href="#" *ngIf="role != 'guest'" (click)="signOut()">
             <i class="fa fa-link"></i>
-            <span>sign out</span>
+            <span i18n="@@signOut">sign out</span>
           </a>
         </li>
       </ul>
@@ -51,12 +51,14 @@
   </aside>
   <div class="content-wrapper">
     <router-outlet></router-outlet>
+    <app-lan lan="en" i18n-lan="@@lan"></app-lan>
+    <!--<app-products lan="en" i18n-lan="@@lan"></app-products>-->
   </div>
   <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      Anything you want
-    </div>
-    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+    <!--<div class="pull-right hidden-xs">-->
+      <!--Anything you want-->
+    <!--</div>-->
+    <strong i18n="@@copyRight">Copyright &copy; 2016  All rights reserved.</strong>
   </footer>
   <div class="control-sidebar-bg"></div>
 </div>

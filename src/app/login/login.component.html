@@ -4,11 +4,11 @@
 
     <form action="#" method="post" (ngSubmit)="login()">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="user name" [(ngModel)]="userName" name="userName">
+        <input type="text" class="form-control" i18n-placeholder="@@userName" placeholder="user name" [(ngModel)]="userName" name="userName">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password" name="password">
+        <input type="password" class="form-control" i18n-placeholder="@@password" placeholder="Password" [(ngModel)]="password" name="password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
@@ -16,7 +16,7 @@
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+          <button type="submit" class="btn btn-primary btn-block btn-flat" i18n="@@signIn">Sign In</button>
         </div>
         <!-- /.col -->
       </div>
