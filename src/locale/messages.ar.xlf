@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="2177c841bf548bc76db5b969b789f3a03c93c83f" datatype="html">
+        <source>sign in</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <note priority="1" from="description">signIn</note>
+      </trans-unit>
+      <trans-unit id="5fcc42956069e23bbee2664c4f6872abcadb8c39" datatype="html">
+        <source>insert product</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <note priority="1" from="description">insertProduct</note>
+      </trans-unit>
+      <trans-unit id="copyRight" datatype="html">
+        <source>Copyright © 2016 <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>Company<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="53bb7dd642cdd3d410cce204d50ad9bbc3865e0f" datatype="html">
+        <source>EGP</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/products/products.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">%%EGP</note>
+      </trans-unit>
+      <trans-unit id="update" datatype="html">
+        <source>update</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/products/products.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="delete" datatype="html">
+        <source>delete</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/products/products.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="643fac6495f3047fffa626529cc2f7360bcfeba3" datatype="html">
+        <source>user name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/login/login.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">%%userName</note>
+      </trans-unit>
+      <trans-unit id="c32ef07f8803a223a83ed17024b38e8d82292407" datatype="html">
+        <source>Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/login/login.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">%%password</note>
+      </trans-unit>
+      <trans-unit id="signIn" datatype="html">
+        <source>Sign In</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/login/login.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
